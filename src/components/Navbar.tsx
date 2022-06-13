@@ -1,9 +1,14 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 export const Navbar = () => {
     
     return (
-        <nav>clark | kent | del</nav>
+        <Container>
+            <nav>
+                clark | kent | tyler
+            </nav>
+        </Container>
     );
     
 }
