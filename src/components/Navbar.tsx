@@ -6,7 +6,7 @@ export const Navbar = () => {
     return (
         <Container>
             <nav>
-                clark | kent | tylers
+                clark | kent | del
             </nav>
         </Container>
     );
