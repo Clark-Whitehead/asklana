@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { Navbar } from './components/Navbar.tsx';
+import { store } from './store.js';
+import { LightSwitch } from './components/LightSwitch.tsx';
+
+const state = store.getState();
+
+
 
 function App() {
   return (
