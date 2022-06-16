@@ -1,15 +1,18 @@
 import '../App.css';
 import { Navbar } from '../components/Navbar.tsx';
-import { store } from './store.js';
-import { LightSwitch } from '../components/LightSwitch.tsx';
+import { LightSwitch } from '../features/LightSwitch.tsx';
 
-const state = store.getState();
+function App(props) {
 
-function App() {
+  const {state, dispatch} = props;
+
   return (
     <div className="App">
       <Navbar />
-      <LightSwitch />
+      <LightSwitch 
+        state={state}
+        dispatch={dispatch}
+      />
     </div>
   );
 }

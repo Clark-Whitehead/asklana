@@ -6,17 +6,16 @@ const toggle = () => {
 
 export const LightSwitch = (props) => {
 
-    const {state, dispatch} = props;
+    const state = props.state;
 
     const handleLightSwitchClick = () => {
-        alert("clark")
         store.dispatch(toggle());
         
     }
 
     return (
         <button onClick={handleLightSwitchClick}>
-            clark
+            on
         </button>
     )
 }

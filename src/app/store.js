@@ -1,18 +1,5 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import { lightSwitchReducer } from '../features/lightSwitchSlice.js';
 
-const initialState = 'off';
-
-
-
-const lightSwitchReducer = (state=initialState, action) => {
-    switch(action.type) {
-        case 'toggle': {
-            return state === 'off' ? 'on' : 'off';
-        }
-        default: {
-            return state
-        }
-    }
-}
 
 export const store = createStore(lightSwitchReducer)
