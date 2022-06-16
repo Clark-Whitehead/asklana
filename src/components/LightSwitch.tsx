@@ -1,5 +1,4 @@
 import React from 'react';
-import { store } from '../store.js';
 
 const toggle = () => {
     return {type: 'toggle'}
@@ -7,7 +6,7 @@ const toggle = () => {
 
 export const LightSwitch = (props) => {
 
-    // let state = props.state;
+    const state = props.state;
 
     const handleLightSwitchClick = () => {
         store.dispatch(toggle());
@@ -16,7 +15,7 @@ export const LightSwitch = (props) => {
 
     return (
         <button onClick={handleLightSwitchClick}>
-            {store.getState()}
+            on
         </button>
     )
 }
