@@ -1,12 +1,22 @@
 import React from 'react';
+import { store } from '../store.js';
+
+const toggle = () => {
+    return {type: 'toggle'}
+}
 
 export const LightSwitch = (props) => {
 
-    state = props.state;
+    // let state = props.state;
+
+    const handleLightSwitchClick = () => {
+        store.dispatch(toggle());
+        
+    }
 
     return (
-        <button>
-            <h1>clark</h1>
+        <button onClick={handleLightSwitchClick}>
+            {store.getState()}
         </button>
     )
 }
