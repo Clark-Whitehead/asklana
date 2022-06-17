@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { lightSwitchReducer } from '../features/lightSwitchSlice.js';
 
 
