@@ -9,6 +9,7 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
+	<h1>tyler </h1>
       <LightSwitch 
         state={state}
         dispatch={dispatch}
