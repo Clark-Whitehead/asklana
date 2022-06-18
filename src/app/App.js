@@ -1,19 +1,20 @@
 import '../App.css';
 import { Navbar } from '../components/Navbar.tsx';
-import { LightSwitch } from '../features/LightSwitch.tsx';
+import { Logo } from '../components/Logo.tsx';
+import { TextBox } from '../features/TextBox.tsx';
+import { ConversationBox } from '../features/ConversationBox.tsx';
+import { Options } from '../features/Options.tsx';
+
 
 function App(props) {
-
-  const {state, dispatch} = props;
 
   return (
     <div className="App">
       <Navbar />
-	<h1>tyler </h1>
-      <LightSwitch 
-        state={state}
-        dispatch={dispatch}
-      />
+      <Logo />
+      <ConversationBox />
+      <TextBox />
+      <Options />
     </div>
   );
 }
