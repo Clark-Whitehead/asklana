@@ -1,4 +1,4 @@
-# This will replace https://LanaAi.com with a React version
+# This repo will replace https://LanaAi.com with a React version
 
 ## To Run
 
