@@ -8,6 +8,12 @@ export const TextBox = () => {
         setText(event.target.value);
     }
 
+    const chatBox = document.getElementById('conversation')
+
+    const handleClick = () => {
+        chatBox.innerHTML += text;
+    }
+
     return (
         <div className="container">
             <div className="row">
@@ -23,7 +29,7 @@ export const TextBox = () => {
                         value={text}
                     />
                 </div>
-                <button className="col-4 btn btn-primary">
+                <button onClick={handleClick} className="col-4 btn btn-primary">
                     Send
                 </button>
             </div>
