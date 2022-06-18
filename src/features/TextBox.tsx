@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export const TextBox = () => {
+
+    const [text, setText] = useState("");
 
     return (
         <div className="container">

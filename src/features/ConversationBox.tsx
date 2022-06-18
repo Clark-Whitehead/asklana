@@ -1,7 +1,8 @@
 export const ConversationBox = () => {
 
     return (
-        <div 
+        <div
+            id="conversationBox"
             style={{height: 300, fontSize: 20}} 
             className="
                 container 
@@ -11,15 +12,18 @@ export const ConversationBox = () => {
                 bg-light
                 mb-3">
             
-            <p 
+            <textarea  
+                id="conversation"
+                readOnly
                 className="
-                col 
+                col
+                h-75
                 text-left
                 mt-3">
                 
                 Lana: Hi there! What do you need help with?
                 
-            </p>
+            </textarea>
 
         </div>
     )

@@ -5,13 +5,12 @@ import { TextBox } from '../features/TextBox.tsx';
 import { ConversationBox } from '../features/ConversationBox.tsx';
 import { Options } from '../features/Options.tsx';
 
-
 function App(props) {
 
   return (
     <div className="App">
       <Navbar />
-      <div class="container">
+      <div className="container">
         <Logo />
         <ConversationBox />
         <TextBox />
