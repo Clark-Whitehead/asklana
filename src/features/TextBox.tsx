@@ -10,6 +10,7 @@ export const TextBox = () => {
                         type="text" 
                         autoFocus
                         className="w-100 pl-3"
+                        placeholder="Type your message..."
                     />
                 </div>
                 <button className="col-4 btn btn-primary">

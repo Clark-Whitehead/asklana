@@ -8,6 +8,7 @@ export const ConversationBox = () => {
                 border 
                 border-dark
                 rounded
+                bg-light
                 mb-3">
             
             <p 

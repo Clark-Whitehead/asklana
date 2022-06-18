@@ -21,13 +21,13 @@ export const Options = () => {
                 </div>
 
                 <div className="col-2">
-                    <button className="btn w-100 h-100 border-dark">
+                    <button className="btn bg-light w-100 h-100 border-dark">
                         SAVE
                     </button>
                 </div>
 
                 <div className="col-2">
-                    <button className="btn h-100 w-100 border-dark">
+                    <button className="btn bg-light h-100 w-100 border-dark">
                         SHARE
                         <img className="w-100" src="social.png" />
                     </button>
@@ -36,7 +36,7 @@ export const Options = () => {
 
             <div className="row mt-3">
                 <div className="col-12">
-                    <button className="btn w-100 border-dark ">
+                    <button className="btn bg-light w-100 border-dark ">
                         RESTART
                     </button>
                 </div>

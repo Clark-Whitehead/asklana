@@ -11,10 +11,12 @@ function App(props) {
   return (
     <div className="App">
       <Navbar />
-      <Logo />
-      <ConversationBox />
-      <TextBox />
-      <Options />
+      <div class="container">
+        <Logo />
+        <ConversationBox />
+        <TextBox />
+        <Options />
+      </div>
     </div>
   );
 }
