@@ -13,7 +13,7 @@ export const TextBox = () => {
                     />
                 </div>
                 <button className="col-4 btn btn-primary">
-                    send
+                    Send
                 </button>
             </div>
         </div>
