@@ -1,4 +1,4 @@
-# Just testing some redux techniques
+# This will replace https://LanaAi.com with a React version
 
 ## To Run
 
