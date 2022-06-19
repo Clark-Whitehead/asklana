@@ -1,4 +1,4 @@
-<img src="https://github.com/Clark-Whitehead/asklana/blob/main/github.png?raw=true" width="500" alt="sample_output">
+<img src="https://github.com/Clark-Whitehead/asklana/blob/main/github.png?raw=true" width="800" alt="sample_output">
 
 # Ai Tutor
 
