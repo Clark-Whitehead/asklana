@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addText } from '../conversationBox/conversationBoxSlice.js';
+import { addTextHuman } from '../conversationBox/conversationBoxSlice.js';
 
 export const TextBox = (props) => {
 
@@ -14,15 +14,31 @@ export const TextBox = (props) => {
 
 
     const handleClick = () => {
-        dispatch(addText(text));
+        dispatch(addTextHuman(text));
+        setTimeout(() => {
+            document.getElementById("conversation").scrollTop = document.getElementById("conversation").scrollHeight
+        }, 200);
         setText("");
     }
+
+    const handleEnter = (event) => {
+        if (event.key === "Enter") {
+            dispatch(addTextHuman(text));
+            setTimeout(() => {
+                document.getElementById("conversation").scrollTop = document.getElementById("conversation").scrollHeight
+            }, 200);
+            setText("");
+        }
+    }
+
+    
 
     return (
         <div className="container">
             <div className="row">
                 <div className="col-8 m-auto">
                     <input
+                        onKeyDown={handleEnter}
                         onChange={handleTextChange}
                         style={{height: 50, fontSize: 15}}
                         enterKeyHint="send" 

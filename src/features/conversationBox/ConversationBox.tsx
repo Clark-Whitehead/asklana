@@ -1,6 +1,8 @@
+import { Restart } from '../restart/Restart.tsx';
+
 export const ConversationBox = (props) => {
 
-    const { conversationBox } = props;
+    const { conversationBox, dispatch } = props;
 
     return (
         <div
@@ -21,12 +23,15 @@ export const ConversationBox = (props) => {
                 col
                 h-75
                 text-left
-                mt-3"
+                mt-3
+                pt-3
+                pb-3
+                mb-n2"
                 value={conversationBox}
                 
             />
                 
-            
+            <Restart dispatch={dispatch}/>
 
         </div>
     )

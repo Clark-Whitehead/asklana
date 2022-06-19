@@ -16,6 +16,7 @@ function App(props) {
         <Logo />
         <ConversationBox 
           conversationBox={state.conversationBox}
+          dispatch = {dispatch}
         />
         <TextBox 
           dispatch={dispatch}

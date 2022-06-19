@@ -2,8 +2,11 @@ const initialState = 'Lana: Hi there! What do you need help with?';
 
 export const conversationBoxReducer = (conversationBox = initialState, action) => {
     switch (action.type) {
-        case 'add': {
-            return action.payload;
+        case 'addHuman': {
+            return conversationBox + "\n\n" + "Human: " + action.payload;
+        }
+        case 'restart': {
+            return initialState;
         }
         default: {
             return conversationBox;
@@ -11,9 +14,15 @@ export const conversationBoxReducer = (conversationBox = initialState, action) =
     }
 }
 
-export function addText(text) {
+export function addTextHuman(text) {
     return {
-        type: 'add',
+        type: 'addHuman',
         payload: text
+    }
+}
+
+export function restart() {
+    return {
+        type: 'restart'
     }
 }

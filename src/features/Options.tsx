@@ -34,14 +34,6 @@ export const Options = () => {
                 </div>
             </div>
 
-            <div className="row mt-3">
-                <div className="col-12">
-                    <button className="btn bg-light w-100 border-dark ">
-                        RESTART
-                    </button>
-                </div>
-            </div>
-
         </div>
     )
 
