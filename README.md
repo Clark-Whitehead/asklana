@@ -1,4 +1,4 @@
-<img src="" width="500" alt="sample_output">
+<img src="https://github.com/Clark-Whitehead/asklana/blob/main/github.png?raw=true" width="500" alt="sample_output">
 
 # This repo will replace https://LanaAi.com with a React version
 
