@@ -1,6 +1,8 @@
 <img src="https://github.com/Clark-Whitehead/asklana/blob/main/github.png?raw=true" width="500" alt="sample_output">
 
-# This repo will replace https://LanaAi.com with a React version
+# Ai Tutor
+
+## This repo will replace https://LanaAi.com with a React version
 
 ## To Run
 
