@@ -7,7 +7,11 @@ export const Options = () => {
                 <div className="col-4">
                     <button className="btn w-100 h-100 btn-danger">
                             <div className="col">
-                                <img className="w-25" src="arrow-left.svg" />
+                                <i 
+                                className="bi bi-arrow-counterclockwise"
+                                style={{fontSize: "2em"}}
+                                >
+                                </i>
                             </div>
                     </button>
                 </div>
@@ -15,7 +19,11 @@ export const Options = () => {
                 <div className="col-4">
                     <button className="btn w-100 h-100 btn-success">
                             <div className="col">
-                                <img className="w-25" src="arrow-right.svg" />
+                            <i 
+                                className="bi bi-arrow-clockwise"
+                                style={{fontSize: "2em"}}
+                            >
+                            </i>
                             </div>
                     </button>
                 </div>
@@ -28,16 +36,10 @@ export const Options = () => {
 
                 <div className="col-2">
                     <button className="btn bg-light h-100 w-100 border-dark">
-                        SHARE
-                        <img className="w-100" src="social.png" />
-                    </button>
-                </div>
-            </div>
-
-            <div className="row mt-3">
-                <div className="col-12">
-                    <button className="btn bg-light w-100 border-dark ">
-                        RESTART
+                        SHARE <br />
+                        <i className="bi bi-facebook mr-1"></i>
+                        <i className="bi bi-instagram mr-1"></i>
+                        <i className="bi bi-tiktok mr-1"></i>
                     </button>
                 </div>
             </div>
