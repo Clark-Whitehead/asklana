@@ -1,3 +1,5 @@
+<img src="" width="500" alt="sample_output">
+
 # This repo will replace https://LanaAi.com with a React version
 
 ## To Run
