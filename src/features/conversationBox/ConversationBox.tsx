@@ -1,4 +1,6 @@
-export const ConversationBox = () => {
+export const ConversationBox = (props) => {
+
+    const { conversationBox } = props
 
     return (
         <div
@@ -21,7 +23,7 @@ export const ConversationBox = () => {
                 text-left
                 mt-3">
                 
-                Lana: Hi there! What do you need help with?
+                {conversationBox}
                 
             </textarea>
 

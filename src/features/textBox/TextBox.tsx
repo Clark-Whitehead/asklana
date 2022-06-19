@@ -1,6 +1,10 @@
 import { useState } from 'react';
+import { addText } from '../conversationBox/conversationBoxSlice.js';
 
-export const TextBox = () => {
+export const TextBox = (props) => {
+
+
+    const { dispatch } = props;
 
     const [text, setText] = useState("");
 
@@ -8,10 +12,10 @@ export const TextBox = () => {
         setText(event.target.value);
     }
 
-    const chatBox = document.getElementById('conversation')
 
     const handleClick = () => {
-        chatBox.innerHTML += text;
+        dispatch(addText(text));
+        setText("");
     }
 
     return (
