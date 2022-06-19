@@ -1,4 +1,4 @@
-import { Restart } from '../restart/Restart.tsx';
+import { Restart } from '../restart/Restart.js';
 
 export const ConversationBox = (props) => {
 

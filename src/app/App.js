@@ -15,7 +15,7 @@ function App(props) {
       <div className="container">
         <Logo />
         <ConversationBox 
-          conversationBox={state.conversationBox}
+          conversationBox={state.textBox}
           dispatch = {dispatch}
         />
         <TextBox 

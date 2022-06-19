@@ -1,11 +1,10 @@
-import { restart } from '../conversationBox/conversationBoxSlice.js';
+import { restart } from './restartSlice.js';
 
 export const Restart = (props) => {
 
     const { dispatch } = props;
 
     const handleRestart = () => {
-        
         dispatch(restart());
     }
 

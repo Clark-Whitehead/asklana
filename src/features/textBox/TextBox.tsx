@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addTextHuman } from '../conversationBox/conversationBoxSlice.js';
+import { addTextHuman } from './textBoxSlice.js';
 
 export const TextBox = (props) => {
 
@@ -12,11 +12,12 @@ export const TextBox = (props) => {
         setText(event.target.value);
     }
 
+    const convo: HTMLElement | null = document.getElementById("conversation");
 
     const handleClick = () => {
         dispatch(addTextHuman(text));
         setTimeout(() => {
-            document.getElementById("conversation").scrollTop = document.getElementById("conversation").scrollHeight
+            convo.scrollTop = convo.scrollHeight
         }, 200);
         setText("");
     }
@@ -25,7 +26,7 @@ export const TextBox = (props) => {
         if (event.key === "Enter") {
             dispatch(addTextHuman(text));
             setTimeout(() => {
-                document.getElementById("conversation").scrollTop = document.getElementById("conversation").scrollHeight
+                convo.scrollTop = convo.scrollHeight
             }, 200);
             setText("");
         }
