@@ -3,7 +3,7 @@ const initialState = 'Lana: Hi there! What do you need help with?';
 export const conversationBoxReducer = (conversationBox = initialState, action) => {
     switch (action.type) {
         case 'add': {
-            return (conversationBox + "\n" + action.payload);
+            return action.payload;
         }
         default: {
             return conversationBox;
