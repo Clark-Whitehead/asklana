@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { addTextHuman } from './textBoxSlice.js';
+import axios from 'axios';
 
 export const TextBox = (props) => {
 
@@ -15,6 +16,28 @@ export const TextBox = (props) => {
     const convo = document.getElementById("conversation");
 
     const handleClick = () => {
+
+        axios.get('http://localhost:4001/apiTest')
+            .then(res => {
+                console.log(res.data.stuff)
+            })
+            .catch(err => {
+                console.log(err)
+            });
+
+        // axios.get('http://localhost:4001/apiTest')
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log(response);
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .finally(function () {
+        //         // always executed
+        //     });
+
         if (text.length > 0) {
             dispatch(addTextHuman(text));
             setTimeout(() => {
