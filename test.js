@@ -1,11 +1,6 @@
 const express = require('express');
 const { PythonShell } = require('python-shell');
 
-let options = {
-  scriptPath: "./",
-  args: ["A dog is a furry animal that"]
-}
-
 
 const app = express();
 
@@ -14,7 +9,15 @@ app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
 
-app.get("/sentence/", (req,res,next) => {
+app.get("/sentence/:sentence", (req,res,next) => {
+
+  const {sentence} = req.params
+
+  let options = {
+    scriptPath: "./",
+    args: [sentence]
+    // args: ["A dog is a furry animal that"]
+  }
   
   PythonShell.run("test.py", options, (err, response) => {
     if (err) console.log(err);
