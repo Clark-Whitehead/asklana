@@ -1,7 +1,7 @@
 import '../App.css';
 import { Navbar } from '../components/Navbar.tsx';
 import { Logo } from '../components/Logo.tsx';
-import { TextBox } from '../features/textBox/TextBox.tsx';
+import { TextBox } from '../features/textBox/TextBox.js';
 import { ConversationBox } from '../features/conversationBox/ConversationBox.tsx';
 import { Options } from '../features/Options.tsx';
 

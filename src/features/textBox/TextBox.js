@@ -12,23 +12,27 @@ export const TextBox = (props) => {
         setText(event.target.value);
     }
 
-    const convo: HTMLElement | null = document.getElementById("conversation");
+    const convo = document.getElementById("conversation");
 
     const handleClick = () => {
-        dispatch(addTextHuman(text));
-        setTimeout(() => {
-            convo.scrollTop = convo.scrollHeight
-        }, 200);
-        setText("");
-    }
-
-    const handleEnter = (event) => {
-        if (event.key === "Enter") {
+        if (text.length > 0) {
             dispatch(addTextHuman(text));
             setTimeout(() => {
                 convo.scrollTop = convo.scrollHeight
             }, 200);
             setText("");
+        }
+    }
+
+    const handleEnter = (event) => {
+        if (text.length > 0) {
+            if (event.key === "Enter") {
+                dispatch(addTextHuman(text));
+                setTimeout(() => {
+                    convo.scrollTop = convo.scrollHeight
+                }, 200);
+                setText("");
+            }
         }
     }
 
