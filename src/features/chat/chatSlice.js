@@ -38,5 +38,3 @@ export function restart() {
 }
 
 export const selectChat = (state) => state.chat;
-
-// export const selectTextBox = (state) => state.textBox;

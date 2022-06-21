@@ -14,8 +14,6 @@ app.listen(PORT, () => {
 app.post("/apiTest", (req,res,next) => {
 
   const message = req.body.message;
-
-  console.log(message)
   
   let options = {
     scriptPath: "./",

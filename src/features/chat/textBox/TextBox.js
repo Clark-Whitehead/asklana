@@ -45,20 +45,20 @@ export const TextBox = () => {
 
                 dispatch(addTextHuman(text));
 
-                // axios.post('http://localhost:4001/apiTest', {message: text})
-                // .then(res => {
-                //     // console.log(res.data.stuff)
-                //     dispatch(addTextAi(res.data.stuff));
-                //     setTimeout(() => {
-                //         convo.scrollTop = convo.scrollHeight
-                //     }, 200);
-                //     setText("");
-                // })
-                // .catch(err => {
-                //     console.log(err)
-                // });
+                axios.post('http://localhost:4001/apiTest', {message: text})
+                .then(res => {
+                    // console.log(res.data.stuff)
+                    dispatch(addTextAi(res.data.stuff));
+                    setTimeout(() => {
+                        convo.scrollTop = convo.scrollHeight
+                    }, 200);
+                    setText("");
+                })
+                .catch(err => {
+                    console.log(err)
+                });
 
-                setText("");
+                // setText("");
 
             }
         }
