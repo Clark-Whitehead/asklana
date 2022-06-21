@@ -5,6 +5,9 @@ export const textBoxReducer = (conversationBox = initialState, action) => {
         case 'addHuman': {
             return conversationBox + "\n\n" + "Human: " + action.payload;
         }
+        case 'addAi': {
+            return conversationBox + "\n\n" + "Lana: " + action.payload;
+        }
         case 'restart': {
             return initialState;
         }
@@ -18,5 +21,12 @@ export function addTextHuman(text) {
     return {
         type: 'addHuman',
         payload: text
+    }
+}
+
+export function addTextAi(response) {
+    return {
+        type: 'addAi',
+        payload: response
     }
 }

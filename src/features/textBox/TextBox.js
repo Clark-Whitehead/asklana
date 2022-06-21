@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { addTextHuman } from './textBoxSlice.js';
+import { addTextAi } from './textBoxSlice.js';
 import axios from 'axios';
 
 export const TextBox = (props) => {
@@ -45,7 +46,7 @@ export const TextBox = (props) => {
                 axios.post('http://localhost:4001/apiTest', {message: text})
                 .then(res => {
                     // console.log(res.data.stuff)
-                    dispatch(addTextHuman(res.data.stuff));
+                    dispatch(addTextAi(res.data.stuff));
                     setTimeout(() => {
                         convo.scrollTop = convo.scrollHeight
                     }, 200);
