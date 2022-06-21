@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { addTextHuman } from './textBoxSlice.js';
-import { addTextAi } from './textBoxSlice.js';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTextAi, addTextHuman, selectTextBox } from '../chatSlice';
 import axios from 'axios';
 
-export const TextBox = (props) => {
-
-
-    const { dispatch } = props;
+export const TextBox = () => {
 
     const [text, setText] = useState("");
+
+    const dispatch = useDispatch();
 
     const handleTextChange = (event) => {
         setText(event.target.value);
@@ -20,43 +19,46 @@ export const TextBox = (props) => {
 
         if (text.length > 0) {
 
-            axios.post('http://localhost:4001/apiTest', {message: text})
-            .then(res => {
-                console.log(res.data.stuff)
-            })
-            .catch(err => {
-                console.log(err)
-            });
-
+            // axios.post('http://localhost:4001/apiTest', {message: text})
+            // .then(res => {
+            //     console.log(res.data.stuff)
+            // })
+            // .catch(err => {
+            //     console.log(err)
+            // });
 
             dispatch(addTextHuman(text));
+
             setTimeout(() => {
                 convo.scrollTop = convo.scrollHeight
             }, 200);
+
             setText("");
+
         }
     }
 
     const handleEnter = (event) => {
+
         if (text.length > 0) {
             if (event.key === "Enter") {
 
                 dispatch(addTextHuman(text));
 
-                axios.post('http://localhost:4001/apiTest', {message: text})
-                .then(res => {
-                    // console.log(res.data.stuff)
-                    dispatch(addTextAi(res.data.stuff));
-                    setTimeout(() => {
-                        convo.scrollTop = convo.scrollHeight
-                    }, 200);
-                    setText("");
-                })
-                .catch(err => {
-                    console.log(err)
-                });
+                // axios.post('http://localhost:4001/apiTest', {message: text})
+                // .then(res => {
+                //     // console.log(res.data.stuff)
+                //     dispatch(addTextAi(res.data.stuff));
+                //     setTimeout(() => {
+                //         convo.scrollTop = convo.scrollHeight
+                //     }, 200);
+                //     setText("");
+                // })
+                // .catch(err => {
+                //     console.log(err)
+                // });
 
-
+                setText("");
 
             }
         }
