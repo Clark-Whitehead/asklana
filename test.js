@@ -18,8 +18,6 @@ app.post("/apiTest", (req,res,next) => {
   let message = req.body.message;
 
   message = initialPrompt + message
-
-  console.log(message)
   
   let options = {
     scriptPath: "./",
