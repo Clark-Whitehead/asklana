@@ -17,7 +17,9 @@ export const TextBox = (props) => {
 
     const handleClick = () => {
 
-        axios.get('http://localhost:4001/apiTest')
+        if (text.length > 0) {
+
+            axios.post('http://localhost:4001/apiTest', {message: text})
             .then(res => {
                 console.log(res.data.stuff)
             })
@@ -25,20 +27,7 @@ export const TextBox = (props) => {
                 console.log(err)
             });
 
-        // axios.get('http://localhost:4001/apiTest')
-        //     .then(function (response) {
-        //         // handle success
-        //         console.log(response);
-        //     })
-        //     .catch(function (error) {
-        //         // handle error
-        //         console.log(error);
-        //     })
-        //     .finally(function () {
-        //         // always executed
-        //     });
 
-        if (text.length > 0) {
             dispatch(addTextHuman(text));
             setTimeout(() => {
                 convo.scrollTop = convo.scrollHeight
@@ -50,6 +39,17 @@ export const TextBox = (props) => {
     const handleEnter = (event) => {
         if (text.length > 0) {
             if (event.key === "Enter") {
+
+
+                axios.post('http://localhost:4001/apiTest', {message: text})
+                .then(res => {
+                    console.log(res.data.stuff)
+                })
+                .catch(err => {
+                    console.log(err)
+                });
+
+
                 dispatch(addTextHuman(text));
                 setTimeout(() => {
                     convo.scrollTop = convo.scrollHeight
