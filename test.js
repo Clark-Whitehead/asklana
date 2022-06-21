@@ -11,9 +11,15 @@ app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
 
+const initialPrompt = "Lana is the worlds smartest AI. She works as a tutor online. \n\n"
+
 app.post("/apiTest", (req,res,next) => {
 
-  const message = req.body.message;
+  let message = req.body.message;
+
+  message = initialPrompt + message
+
+  console.log(message)
   
   let options = {
     scriptPath: "./",

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTextAi, addTextHuman, selectTextBox } from '../chatSlice';
+import { addTextAi, addTextHuman, selectChat } from '../chatSlice';
 import axios from 'axios';
 
 export const TextBox = () => {
@@ -8,6 +8,8 @@ export const TextBox = () => {
     const [text, setText] = useState("");
 
     const dispatch = useDispatch();
+
+    const chat = useSelector(selectChat)
 
     const handleTextChange = (event) => {
         setText(event.target.value);
@@ -45,20 +47,24 @@ export const TextBox = () => {
 
                 dispatch(addTextHuman(text));
 
-                axios.post('http://localhost:4001/apiTest', {message: text})
+                setText("");
+
+                setTimeout(() => {
+                    alert(chat)
+                }, 500);
+
+                axios.post('http://localhost:4001/apiTest', {message: chat})
                 .then(res => {
                     // console.log(res.data.stuff)
                     dispatch(addTextAi(res.data.stuff));
                     setTimeout(() => {
                         convo.scrollTop = convo.scrollHeight
                     }, 200);
-                    setText("");
+                    
                 })
                 .catch(err => {
                     console.log(err)
                 });
-
-                // setText("");
 
             }
         }
