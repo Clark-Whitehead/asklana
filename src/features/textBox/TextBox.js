@@ -40,21 +40,23 @@ export const TextBox = (props) => {
         if (text.length > 0) {
             if (event.key === "Enter") {
 
+                dispatch(addTextHuman(text));
 
                 axios.post('http://localhost:4001/apiTest', {message: text})
                 .then(res => {
-                    console.log(res.data.stuff)
+                    // console.log(res.data.stuff)
+                    dispatch(addTextHuman(res.data.stuff));
+                    setTimeout(() => {
+                        convo.scrollTop = convo.scrollHeight
+                    }, 200);
+                    setText("");
                 })
                 .catch(err => {
                     console.log(err)
                 });
 
 
-                dispatch(addTextHuman(text));
-                setTimeout(() => {
-                    convo.scrollTop = convo.scrollHeight
-                }, 200);
-                setText("");
+
             }
         }
     }
