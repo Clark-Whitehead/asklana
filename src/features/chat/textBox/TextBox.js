@@ -45,15 +45,14 @@ export const TextBox = () => {
         if (text.length > 0) {
             if (event.key === "Enter") {
 
+
                 dispatch(addTextHuman(text));
+
+                const temp = text;
 
                 setText("");
 
-                setTimeout(() => {
-                    alert(chat)
-                }, 500);
-
-                axios.post('http://localhost:4001/apiTest', {message: chat})
+                axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
                 .then(res => {
                     // console.log(res.data.stuff)
                     dispatch(addTextAi(res.data.stuff));

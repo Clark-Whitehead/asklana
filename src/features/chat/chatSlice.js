@@ -3,10 +3,10 @@ const initialState = 'Lana: Hi there! What do you need help with?';
 export const chatReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'addHuman': {
-            return state + "\n\n" + "Human: " + action.payload;
+            return state + "\n\n" + "Human: " + action.payload + "\n\nLana: ";
         }
         case 'addAi': {
-            return state + "\n\n" + "Lana: " + action.payload;
+            return state + action.payload;
         }
         case 'restart': {
             return initialState;
