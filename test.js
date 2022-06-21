@@ -28,7 +28,7 @@ app.post("/apiTest", (req,res,next) => {
   
   PythonShell.run("test.py", options, (err, response) => {
     if (err) console.log(err);
-    if (response) res.send({stuff: response[0]});;
+    if (response) res.send({responseOut: response[0]});;
   })
 
   // res.send({stuff: message});

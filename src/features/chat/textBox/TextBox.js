@@ -54,16 +54,13 @@ export const TextBox = () => {
 
                 axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
                 .then(res => {
-                    // console.log(res.data.stuff)
-                    dispatch(addTextAi(res.data.stuff));
-                    setTimeout(() => {
-                        convo.scrollTop = convo.scrollHeight
-                    }, 200);
-                    
+                    dispatch(addTextAi(res.data.responseOut));
+                    convo.scrollTop = convo.scrollHeight
                 })
                 .catch(err => {
                     console.log(err)
                 });
+
 
             }
         }
