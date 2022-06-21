@@ -1,11 +1,11 @@
-import { restart } from '../conversationBox/conversationBoxSlice.js';
+import { restart } from '../chatSlice';
+import { useDispatch } from 'react-redux'
 
-export const Restart = (props) => {
+export const Restart = () => {
 
-    const { dispatch } = props;
+    const dispatch = useDispatch();
 
     const handleRestart = () => {
-        
         dispatch(restart());
     }
 

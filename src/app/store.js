@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux';
-// import { lightSwitchReducer } from '../features/lightSwitchSlice.js';
-// import { textBoxReducer } from '../features/textBox/textBoxSlice.js';
-import { conversationBox, conversationBoxReducer } from '../features/conversationBox/conversationBoxSlice.js';
+import { chatReducer } from '../features/chat/chatSlice';
 
-export const store = createStore(combineReducers({
-    conversationBox: conversationBoxReducer
-  }));
+const rootReducer = combineReducers({
+    chat: chatReducer,
+})
+
+export const store = createStore(rootReducer);

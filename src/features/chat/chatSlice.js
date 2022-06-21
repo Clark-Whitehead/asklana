@@ -1,15 +1,18 @@
 const initialState = 'Lana: Hi there! What do you need help with?';
 
-export const conversationBoxReducer = (conversationBox = initialState, action) => {
+export const chatReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'addHuman': {
-            return conversationBox + "\n\n" + "Human: " + action.payload;
+            return state + "\n\n" + "Human: " + action.payload + "\n\nLana: ";
+        }
+        case 'addAi': {
+            return state + action.payload;
         }
         case 'restart': {
             return initialState;
         }
         default: {
-            return conversationBox;
+            return state;
         }
     }
 }
@@ -21,8 +24,17 @@ export function addTextHuman(text) {
     }
 }
 
+export function addTextAi(text) {
+    return {
+        type: 'addAi',
+        payload: text
+    }
+}
+
 export function restart() {
     return {
         type: 'restart'
     }
 }
+
+export const selectChat = (state) => state.chat;

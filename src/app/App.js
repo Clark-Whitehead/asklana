@@ -1,29 +1,22 @@
 import '../App.css';
 import { Navbar } from '../components/Navbar.tsx';
 import { Logo } from '../components/Logo.tsx';
-import { TextBox } from '../features/textBox/TextBox.tsx';
-import { ConversationBox } from '../features/conversationBox/ConversationBox.tsx';
+import { TextBox } from '../features/chat/textBox/TextBox.js';
+import { ConversationBox } from '../features/chat/conversationBox/ConversationBox.tsx';
 import { Options } from '../features/Options.tsx';
 
-function App(props) {
-
-  const {state, dispatch} = props;
+function App() {
 
   return (
-    <div className="App">
-      <Navbar />
-      <div className="container">
-        <Logo />
-        <ConversationBox 
-          conversationBox={state.conversationBox}
-          dispatch = {dispatch}
-        />
-        <TextBox 
-          dispatch={dispatch}
-        />
-        <Options />
+      <div className="App">
+        <Navbar />
+        <div className="container">
+          <Logo />
+          <ConversationBox />          
+          <TextBox />
+          <Options />
+        </div>
       </div>
-    </div>
   );
 }
 

@@ -1,8 +1,14 @@
-import { Restart } from '../restart/Restart.tsx';
+//import components
+import { Restart } from '../restart/Restart.js';
 
-export const ConversationBox = (props) => {
+//import Redux
+import { useSelector } from 'react-redux';
+import { selectChat } from '../chatSlice.js';
 
-    const { conversationBox, dispatch } = props;
+//export component
+export const ConversationBox = () => {
+
+    const chat = useSelector(selectChat)
 
     return (
         <div
@@ -27,11 +33,11 @@ export const ConversationBox = (props) => {
                 pt-3
                 pb-3
                 mb-n2"
-                value={conversationBox}
+                value={chat}
                 
             />
                 
-            <Restart dispatch={dispatch}/>
+            <Restart />
 
         </div>
     )
