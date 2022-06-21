@@ -11,7 +11,7 @@ app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
 
-const initialPrompt = "Lana is the worlds smartest AI. She works as a tutor online. \n\n"
+const initialPrompt = "Lana is the worlds smartest Artificial Intelligence. She tutors students online. \n\n"
 
 app.post("/apiTest", (req,res,next) => {
 
