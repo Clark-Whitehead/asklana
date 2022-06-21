@@ -1,7 +1,10 @@
 import openai
 import sys
+import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
-api_key = "sk-a3nFqMMwwqkiqvGZ9KTr7YXiGX0ZhEUpUznv6fBS"
+api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = api_key
 
 my_prompt = sys.argv[1]
