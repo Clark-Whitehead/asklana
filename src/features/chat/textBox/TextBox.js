@@ -21,21 +21,20 @@ export const TextBox = () => {
 
         if (text.length > 0) {
 
-            // axios.post('http://localhost:4001/apiTest', {message: text})
-            // .then(res => {
-            //     console.log(res.data.stuff)
-            // })
-            // .catch(err => {
-            //     console.log(err)
-            // });
-
             dispatch(addTextHuman(text));
 
-            setTimeout(() => {
-                convo.scrollTop = convo.scrollHeight
-            }, 200);
+            const temp = text;
 
             setText("");
+
+            axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
+            .then(res => {
+                dispatch(addTextAi(res.data.responseOut));
+                convo.scrollTop = convo.scrollHeight
+            })
+            .catch(err => {
+                console.log(err)
+            });
 
         }
     }
