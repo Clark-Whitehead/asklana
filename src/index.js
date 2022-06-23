@@ -4,7 +4,7 @@ import './index.css';
 import App from './app/App';
 import { Provider } from 'react-redux';
 
-import { store } from './app/store.js';
+import store from './app/store.js';
 
 const render = () => {
   ReactDOM.render(

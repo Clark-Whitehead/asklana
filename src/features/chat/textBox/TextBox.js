@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTextAi, addTextHuman, selectChat } from '../chatSlice';
+import { addAi, addHuman, selectChat } from '../chatSlice';
 import axios from 'axios';
 
 export const TextBox = () => {
@@ -21,7 +21,7 @@ export const TextBox = () => {
 
         if (text.length > 0) {
 
-            dispatch(addTextHuman(text));
+            dispatch(addHuman(text));
 
             const temp = text;
 
@@ -29,7 +29,7 @@ export const TextBox = () => {
 
             axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
             .then(res => {
-                dispatch(addTextAi(res.data.responseOut));
+                dispatch(addAi(res.data.responseOut));
                 convo.scrollTop = convo.scrollHeight
             })
             .catch(err => {
@@ -45,7 +45,7 @@ export const TextBox = () => {
             if (event.key === "Enter") {
 
 
-                dispatch(addTextHuman(text));
+                dispatch(addHuman(text));
 
                 const temp = text;
 
@@ -53,7 +53,7 @@ export const TextBox = () => {
 
                 axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
                 .then(res => {
-                    dispatch(addTextAi(res.data.responseOut));
+                    dispatch(addAi(res.data.responseOut));
                     convo.scrollTop = convo.scrollHeight
                 })
                 .catch(err => {

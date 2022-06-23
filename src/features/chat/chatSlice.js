@@ -1,40 +1,31 @@
-const initialState = 'Lana: Hi there! What do you need help with?';
+import { createSlice } from '@reduxjs/toolkit';
 
-export const chatReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'addHuman': {
+const options = {
+    name: 'chat',
+    initialState: 'Lana: Hi there! What do you need help with?',
+    reducers: {
+        addHuman: (state, action) => {
             return state + "\n\n" + "Human: " + action.payload + "\n\nLana: ";
-        }
-        case 'addAi': {
+        },
+        addAi: (state, action) => {
             return state + action.payload;
-        }
-        case 'restart': {
-            return initialState;
-        }
-        default: {
-            return state;
+        },
+        restart: (state, action) => {
+            return options.initialState;
         }
     }
 }
 
-export function addTextHuman(text) {
-    return {
-        type: 'addHuman',
-        payload: text
-    }
-}
-
-export function addTextAi(text) {
-    return {
-        type: 'addAi',
-        payload: text
-    }
-}
-
-export function restart() {
-    return {
-        type: 'restart'
-    }
-}
+export const chatSlice = createSlice(options)
 
 export const selectChat = (state) => state.chat;
+
+export const {
+
+    addHuman, 
+    addAi, 
+    restart
+
+} = chatSlice.actions;
+
+export default chatSlice.reducer
