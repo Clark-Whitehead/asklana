@@ -12,4 +12,8 @@
 
 ### 3. npm run start
 
+### 4. node test.js
+
 Launches the app in your web browswer
+
+You'll need your own OpenAi Api key
