@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addAi, addHuman, selectChat } from '../chatSlice';
+import store from '../../../app/store'
 import axios from 'axios';
 
 export const TextBox = () => {
@@ -8,8 +9,6 @@ export const TextBox = () => {
     const [text, setText] = useState("");
 
     const dispatch = useDispatch();
-
-    const chat = useSelector(selectChat)
 
     const handleTextChange = (event) => {
         setText(event.target.value);
@@ -23,14 +22,12 @@ export const TextBox = () => {
 
             dispatch(addHuman(text));
 
-            const temp = text;
-
             setText("");
 
-            axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
+            axios.post('http://localhost:4001/apiTest', {message: store.getState().chat})
             .then(res => {
                 dispatch(addAi(res.data.responseOut));
-                convo.scrollTop = convo.scrollHeight
+                convo.scrollTop = convo.scrollHeight;
             })
             .catch(err => {
                 console.log(err)
@@ -47,14 +44,12 @@ export const TextBox = () => {
 
                 dispatch(addHuman(text));
 
-                const temp = text;
-
                 setText("");
 
-                axios.post('http://localhost:4001/apiTest', {message: chat + "\n\n" + "Human: " + temp + "\n\nLana:"})
+                axios.post('http://localhost:4001/apiTest', {message: store.getState().chat})
                 .then(res => {
                     dispatch(addAi(res.data.responseOut));
-                    convo.scrollTop = convo.scrollHeight
+                    convo.scrollTop = convo.scrollHeight;
                 })
                 .catch(err => {
                     console.log(err)
