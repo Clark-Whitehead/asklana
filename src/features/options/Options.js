@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectChat, selectIdx, setChat, decrement } from '../chat/chatSlice';
+import { selectChat, selectIdx, setChat, decrement, increment } from '../chat/chatSlice';
 import { selectConvo } from './optionsSlice.js';
 import store from '../../app/store'
 
@@ -32,10 +32,6 @@ export const Options = () => {
 
     }, [idx])
 
-    // useEffect(() => {
-    //     console.log(`storeChatId = ${storeChatId}`)
-    //     setIdx(storeChatId)
-    // }, [storeChatId])
 
     //set id for this component, when TextBox.js adds a new message. //sets the new message to head of list.
     useEffect(() => {
@@ -65,6 +61,16 @@ export const Options = () => {
         }
     }
 
+    const handleForward = () => {
+        if (idx < convo.length - 1) {
+            //increment local id
+            setIdx(prev => prev + 1)
+
+            //increment store.chat.id
+            dispatch(increment())
+        }
+    }
+
     const handleSave = () => {
         console.log(convo)
     }
@@ -88,7 +94,7 @@ export const Options = () => {
                 </div>
 
                 <div className="col-4">
-                    <button className="btn w-100 h-100 btn-success">
+                    <button onClick={handleForward} className="btn w-100 h-100 btn-success">
                             <div className="col">
                             <i 
                                 className="bi bi-arrow-clockwise"

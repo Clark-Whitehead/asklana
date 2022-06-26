@@ -15,6 +15,7 @@ export const TextBox = () => {
         setText(event.target.value);
     }
 
+    //grab the main chatbox so we can scroll to bottom after enter or send
     const convo = document.getElementById("conversation");
 
     const handleClick = () => {
