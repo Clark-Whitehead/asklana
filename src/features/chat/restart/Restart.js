@@ -1,4 +1,5 @@
 import { restart } from '../chatSlice';
+// import { reset } from '../../options/optionsSlice';
 import { useDispatch } from 'react-redux'
 
 export const Restart = () => {
@@ -7,6 +8,7 @@ export const Restart = () => {
 
     const handleRestart = () => {
         dispatch(restart());
+        // dispatch(reset());
     }
 
     return (

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addAi, addHuman, selectChat } from '../chatSlice';
+import { addResponse } from '../../options/optionsSlice';
 import store from '../../../app/store'
 import axios from 'axios';
 
@@ -46,9 +47,10 @@ export const TextBox = () => {
 
                 setText("");
 
-                axios.post('http://localhost:4001/apiTest', {message: store.getState().chat})
+                axios.post('http://localhost:4001/apiTest', {message: store.getState().chat.chat})
                 .then(res => {
                     dispatch(addAi(res.data.responseOut));
+                    dispatch(addResponse({id: store.getState().chat.id, chat: store.getState().chat.chat}));
                     convo.scrollTop = convo.scrollHeight;
                 })
                 .catch(err => {
