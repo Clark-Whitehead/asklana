@@ -1,13 +1,29 @@
-body {
-  height: 100vh;
-  background-color: #f0f8ff;
-}
-
 .App {
   text-align: center;
   /* background-image: url("https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_1280.jpg"); */
   background-color: #f0f8ff;
   height: 100vh;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.content-wrap {
+  flex:1;
+}
+
+#main-footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+#main-footer a {
+  color: black;
 }
 
 #conversationBox {

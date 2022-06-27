@@ -78,7 +78,7 @@ export const Options = () => {
 
 
     return (
-        <div className="container mt-2">
+        <div className="container mt-2 mb-3">
             <div className="row">
 
                 <div className="col-4">
