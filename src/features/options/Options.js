@@ -86,7 +86,7 @@ export const Options = () => {
                             <div className="col">
                                 <i 
                                 className="bi bi-arrow-counterclockwise"
-                                style={{fontSize: "2em"}}
+                                style={{fontSize: "2em", color: 'red'}}
                                 >
                                 </i>
                             </div>
@@ -94,7 +94,7 @@ export const Options = () => {
                 </div>
 
                 <div className="col-4">
-                    <button style={{backgroundColor: "#ADD8E6"}} onClick={handleForward} className="btn w-100 h-100">
+                    <button style={{backgroundColor: "#ADD8E6", color: 'green'}} onClick={handleForward} className="btn w-100 h-100">
                             <div className="col">
                             <i 
                                 className="bi bi-arrow-clockwise"
@@ -114,9 +114,9 @@ export const Options = () => {
                 <div className="col-2">
                     <button className="btn bg-light h-100 w-100 border-dark">
                         SHARE <br />
-                        <i className="bi bi-facebook mr-1"></i>
-                        <i className="bi bi-instagram mr-1"></i>
-                        <i className="bi bi-tiktok mr-1"></i>
+                        <i style={{color: 'blue'}} className="bi bi-facebook mr-1"></i>
+                        <i style={{color: 'purple'}} className="bi bi-instagram mr-1"></i>
+                        <i style={{color: 'white', backgroundColor: 'black'}} className="bi bi-tiktok mr-1 rounded"></i>
                     </button>
                 </div>
             </div>

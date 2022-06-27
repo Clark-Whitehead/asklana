@@ -9,19 +9,10 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul className="navbar-nav mr-auto">
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Left</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">HOME</a>
                     </li>
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="//codeply.com">Codeply</a>
-                    </li>
-                    <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
-                    </li>
-                    <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
-                    </li>
-                    <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">SHARED CONVERSATIONS</a>
                     </li>
                 </ul>
             </div>
@@ -34,10 +25,10 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul className="navbar-nav ml-auto">
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Right</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">LOGIN</a>
                     </li>
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">REGISTER</a>
                     </li>
                 </ul>
             </div>
