@@ -17,7 +17,7 @@ export const Navbar = () => {
                 </ul>
             </div>
             <div className="mx-auto order-0">
-                <a style={{color: "#0B043D", fontFamily: 'arial', fontWeight: 'bold'}} className="navbar-brand mx-auto" href="#">LANA Ai</a>
+                <a style={{color: "#0B043D", fontFamily: 'cursive', fontSize: '25px', fontWeight: 'bold'}} className="navbar-brand mx-auto" href="#">"Learning is Power" - Lana</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span className="navbar-toggler-icon"></span>
                 </button>
