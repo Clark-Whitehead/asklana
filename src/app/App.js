@@ -10,7 +10,7 @@ function App() {
   return (
       <div className="App">
         <Navbar />
-        <div className="container">
+        <div className="container pb-20">
           <Logo />
           <ConversationBox />          
           <TextBox />
