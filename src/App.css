@@ -1,3 +1,8 @@
+body {
+  height: 100vh;
+  background-color: #f0f8ff;
+}
+
 .App {
   text-align: center;
   /* background-image: url("https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_1280.jpg"); */
