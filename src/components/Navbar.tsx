@@ -5,39 +5,39 @@ export const Navbar = () => {
     
     return (
         
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav style={{backgroundColor: "#add8e6"}} className="navbar navbar-expand-md navbar-dark">
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Left</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Left</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="//codeply.com">Codeply</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="//codeply.com">Codeply</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
                     </li>
                 </ul>
             </div>
             <div className="mx-auto order-0">
-                <a className="navbar-brand mx-auto" href="#">LANA Ai</a>
+                <a style={{color: "#0B043D", fontFamily: 'arial', fontWeight: 'bold'}} className="navbar-brand mx-auto" href="#">LANA Ai</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                     <span className="navbar-toggler-icon"></span>
                 </button>
             </div>
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Right</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Right</a>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
+                    <li style={{marginRight: '10px'}} className="nav-item">
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Link</a>
                     </li>
                 </ul>
             </div>

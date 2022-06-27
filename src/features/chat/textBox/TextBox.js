@@ -71,9 +71,10 @@ export const TextBox = () => {
             <div className="row">
                 <div className="col-8 m-auto">
                     <input
+                        id="main-text-box"
                         onKeyDown={handleEnter}
                         onChange={handleTextChange}
-                        style={{height: 50, fontSize: 15}}
+                        style={{height: 50, fontSize: 15, color: '#000000'}}
                         enterKeyHint="send" 
                         type="text" 
                         autoFocus
@@ -82,7 +83,7 @@ export const TextBox = () => {
                         value={text}
                     />
                 </div>
-                <button onClick={handleClick} className="col-4 btn btn-primary">
+                <button style={{backgroundColor: "#FC6653", color: "white"}} onClick={handleClick} className="col-4 btn border border-dark">
                     Send
                 </button>
             </div>

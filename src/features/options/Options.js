@@ -82,7 +82,7 @@ export const Options = () => {
             <div className="row">
 
                 <div className="col-4">
-                    <button onClick={handleBack} className="btn w-100 h-100 btn-danger">
+                    <button  style={{backgroundColor: "#ADD8E6"}} onClick={handleBack} className="btn w-100 h-100">
                             <div className="col">
                                 <i 
                                 className="bi bi-arrow-counterclockwise"
@@ -94,7 +94,7 @@ export const Options = () => {
                 </div>
 
                 <div className="col-4">
-                    <button onClick={handleForward} className="btn w-100 h-100 btn-success">
+                    <button style={{backgroundColor: "#ADD8E6"}} onClick={handleForward} className="btn w-100 h-100">
                             <div className="col">
                             <i 
                                 className="bi bi-arrow-clockwise"

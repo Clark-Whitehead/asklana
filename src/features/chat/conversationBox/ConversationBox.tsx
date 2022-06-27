@@ -13,13 +13,12 @@ export const ConversationBox = () => {
     return (
         <div
             id="conversationBox"
-            style={{height: 300, fontSize: 20}} 
+            style={{height: 300, fontSize: 20, backgroundColor: '#006C81'}} 
             className="
                 container 
                 border 
                 border-dark
                 rounded
-                bg-light
                 mb-3">
             
             <textarea  
