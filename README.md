@@ -2,20 +2,28 @@
 
 # ASK LANA - THE AI TUTOR
 
-# View Web App - <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a> !!!Run the test.js file to use chat functionality!!! Run node test.js
-
 ## This repo will replace https://LanaAi.com with a React version
 
-## To Run
+### TO RUN
 
-### 1. Clone repo onto your computer
+### 1. Register with openAi to get your own API Key
 
-### 2. cd asklana
+### 2. Clone repo onto your computer
 
-### 3. npm run start
+### 3. cd asklana
 
-### 4. node test.js
+### 4. create file '.env' in same folder as testApi.js
 
-Launches the app in your web browswer
+### 5. add your openAi API key to .env file: OPENAI_API_KEY="your api key"
 
-## You'll need your own OpenAi Api key
+### 6. pip install openai
+
+### 7. pip install python-dotenv
+
+### 8. npm install express
+
+### 9. node testApi.js
+
+### 10. npm run start
+
+### Should be running at http://localhost:3000
