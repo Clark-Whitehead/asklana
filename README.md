@@ -8,7 +8,7 @@
 
 ### I created an app linked to this repo - https://asklana-e5m27.ondigitalocean.app/
 
-### Or follow these steps to run locally.
+### Or follow these steps to run locally - You will need your own API key either way.
 
 ### 1. Register with openAi to get your own API Key
 
