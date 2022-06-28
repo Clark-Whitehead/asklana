@@ -1,6 +1,6 @@
 <img src="https://github.com/Clark-Whitehead/asklana/blob/main/lana_ai_tutor.png?raw=true" width="800" alt="sample_output">
 
-# Ask Lana - The Ai Tutor
+# ASK LANA - THE AI TUTOR
 
 # View Web App - <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
 
