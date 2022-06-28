@@ -7,6 +7,7 @@ import { Options } from '../features/options/Options.js';
 import { Conversations } from '../components/Conversations';
 import { Footer } from '../components/Footer.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NoMatch } from '../components/NoMatch.js'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
                   path="/conversations"
                   element={<Conversations />}
                 />
+                <Route path="*" element={<NoMatch />} />
               </Routes>
             </Router>
           </div>
