@@ -16,4 +16,4 @@
 
 Launches the app in your web browswer
 
-You'll need your own OpenAi Api key
+# You'll need your own OpenAi Api key
