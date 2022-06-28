@@ -12,7 +12,7 @@ export const Navbar = () => {
                         <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">HOME</a>
                     </li>
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="./conversations">SHARED CONVERSATIONS</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/conversations">SHARED CONVERSATIONS</a>
                     </li>
                 </ul>
             </div>

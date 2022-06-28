@@ -69,7 +69,7 @@ export const TextBox = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-8 m-auto">
+                <div className="col-8 ml-0">
                     <input
                         id="main-text-box"
                         onKeyDown={handleEnter}
@@ -83,9 +83,11 @@ export const TextBox = () => {
                         value={text}
                     />
                 </div>
-                <button style={{backgroundColor: "#FC6653", color: "white"}} onClick={handleClick} className="col-4 btn border border-dark">
-                    Send
-                </button>
+                <div className="container col-4">
+                    <button style={{backgroundColor: "#FC6653", color: "white", width: '100%', height: 50}} onClick={handleClick} className="btn border border-dark">
+                        Send
+                    </button>
+                </div>
             </div>
         </div>
     )

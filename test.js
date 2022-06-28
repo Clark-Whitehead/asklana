@@ -50,3 +50,13 @@ app.post("/apiTest", (req,res,next) => {
   // res.send({stuff: message});
 
 })
+
+app.get("/getSharedConversations", (req, res) => {
+  db.query("select * from conversations", (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  })
+})
