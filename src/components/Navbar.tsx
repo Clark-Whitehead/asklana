@@ -9,10 +9,10 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul className="navbar-nav mr-auto">
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">HOME</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">HOME</a>
                     </li>
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">SHARED CONVERSATIONS</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="./conversations">SHARED CONVERSATIONS</a>
                     </li>
                 </ul>
             </div>
