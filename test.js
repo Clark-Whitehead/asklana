@@ -1,6 +1,24 @@
 const express = require('express');
 const cors = require('cors');
 const { PythonShell } = require('python-shell');
+const mysql = require('mysql');
+
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'asklana'
+});
+
+db.connect((err) => {
+  if(err) {
+    throw err;
+  } else {
+    console.log('Mysql connected');
+  }
+})
+
+
 
 const app = express();
 app.use(express.json());

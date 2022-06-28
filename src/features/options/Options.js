@@ -114,7 +114,7 @@ export const Options = () => {
                 <div className="col-2">
                     <button className="btn bg-light h-100 w-100 border-dark">
                         SHARE <br />
-                        <i style={{color: 'blue'}} className="bi bi-facebook mr-1"></i>
+                        <i style={{color: '#385599'}} className="bi bi-facebook mr-1"></i>
                         <i style={{color: 'purple'}} className="bi bi-instagram mr-1"></i>
                         <i style={{color: 'white', backgroundColor: 'black'}} className="bi bi-tiktok mr-1 rounded"></i>
                     </button>
