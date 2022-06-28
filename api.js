@@ -51,8 +51,10 @@ app.post("/apiTest", (req,res,next) => {
 
 })
 
-app.get("/getSharedConversations", (req, res) => {
-  db.query("select * from conversations", (err, result) => {
+
+app.post("/getSharedConversations", (req, res) => {
+  console.log(req.body)
+  db.query(`select * from conversations where titleUrl = "${req.body.titleUrl}"`, (err, result) => {
     if (err) {
       console.log(err);
     } else {
