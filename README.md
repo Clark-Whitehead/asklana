@@ -2,7 +2,7 @@
 
 # ASK LANA - THE AI TUTOR
 
-## This repo will replace https://LanaAi.com with a React version
+## This repo will replace <a href="https://LanaAi.com" target="_blank">https://LanaAi.com</a> with a React version
 
 ### TO RUN
 
