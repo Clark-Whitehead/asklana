@@ -2,7 +2,7 @@
 
 # ASK LANA - THE AI TUTOR
 
-# View Web App - <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
+# View Web App - <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a> !!!Run the test.js file to use chat functionality!!! Run node test.js
 
 ## This repo will replace https://LanaAi.com with a React version
 
