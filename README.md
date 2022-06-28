@@ -2,7 +2,7 @@
 
 # Ai Tutor
 
-<a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
+# <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
 
 ## This repo will replace https://LanaAi.com with a React version
 
