@@ -24,7 +24,7 @@ function App() {
                     element={
                       <div>
                         <Logo />
-                        <div style={{backgroundColor: '#DBDBDB'}} className="border border-secondary rounded">
+                        <div style={{backgroundColor: '#DBDBDB'}} className="border border-secondary rounded mb-3">
                           <ConversationBox />          
                           <TextBox />
                           <Options />
