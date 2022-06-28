@@ -1,8 +1,8 @@
 <img src="https://github.com/Clark-Whitehead/asklana/blob/main/lana_ai_tutor.png?raw=true" width="800" alt="sample_output">
 
-# Ai Tutor
+# Ask Lana - The Ai Tutor
 
-# <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
+# View Web App - <a href="https://asklana-e5m27.ondigitalocean.app">asklana.org</a>
 
 ## This repo will replace https://LanaAi.com with a React version
 
