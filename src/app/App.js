@@ -10,6 +10,7 @@ import { Conversation } from '../components/Conversation';
 import { Footer } from '../components/Footer.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NoMatch } from '../components/NoMatch.js'
+import { Register } from '../components/Register.js';
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
                 />
                 
                 <Route path="/conversations/conversation/:conversationId" element={<Conversation />} />
+
+                {/*Auth Route*/}
+                <Route path="/register" element={<Register />} />
+
                 <Route path="*" element={<NoMatch />} />
               </Routes>
             </Router>
