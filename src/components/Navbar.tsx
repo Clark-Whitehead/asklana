@@ -28,7 +28,7 @@ export const Navbar = () => {
                         <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">LOGIN</a>
                     </li>
                     <li style={{marginRight: '10px'}} className="nav-item">
-                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">REGISTER</a>
+                        <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/register">REGISTER</a>
                     </li>
                 </ul>
             </div>
