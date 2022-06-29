@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectChat, selectIdx, setChat, decrement, increment } from '../chat/chatSlice';
 import { selectConvo } from './optionsSlice.js';
+import { ShareModal } from '../../components/ShareModal.js';
 import store from '../../app/store'
 
 export const Options = () => {
@@ -10,6 +11,8 @@ export const Options = () => {
 
     //The id to keep track of where we are in the store.conversations array. Changed by buttons
     const [idx, setIdx] = useState(0);
+
+    const [openModal, setOpenModal] = useState(false);
 
     const storeChatId = useSelector(selectIdx)
 
@@ -75,6 +78,10 @@ export const Options = () => {
         console.log(convo)
     }
 
+    const handleModal = () => {
+        setOpenModal(true);
+    }
+
 
 
     return (
@@ -112,7 +119,7 @@ export const Options = () => {
                 </div>
 
                 <div className="col-2">
-                    <button className="btn bg-light h-100 w-100 border-dark">
+                    <button onClick={handleModal} className="btn bg-light h-100 w-100 border-dark">
                         SHARE <br />
                         <i style={{color: '#385599'}} className="bi bi-facebook mr-1"></i>
                         <i style={{color: 'purple'}} className="bi bi-instagram mr-1"></i>
@@ -120,7 +127,7 @@ export const Options = () => {
                     </button>
                 </div>
             </div>
-
+            {openModal && <ShareModal closeModal={setOpenModal} />}
         </div>
     )
 
