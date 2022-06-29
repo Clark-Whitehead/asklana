@@ -1,4 +1,5 @@
 import '../App.css';
+import { useState, useEffect } from 'react';
 import { Navbar } from '../components/Navbar.tsx';
 import { Logo } from '../components/Logo.tsx';
 import { TextBox } from '../features/chat/textBox/TextBox.js';
@@ -12,7 +13,26 @@ import { NoMatch } from '../components/NoMatch.js'
 
 function App() {
 
-  return (
+  //////////CHECK IF ON MOBILE DEVICE//////////////
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      }
+  }, []);
+  const isMobile = width <= 768;
+  ///////////////////////////////////////////////////
+
+  if (isMobile) {
+    return (
+      <h1>You must use on a larger screen such as a laptop</h1>
+    )
+  } else {
+    return (
       <div className="App page-container">
         <div className="content-wrap">
           <Navbar />
@@ -45,7 +65,10 @@ function App() {
         </div>
         <Footer />
       </div>
-  );
+    );
+  }
+
+  
 }
 
 export default App;
