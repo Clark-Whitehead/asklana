@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './css/ShareModal.css';
+import store from '../app/store';
 import Axios from 'axios';
 
 export const ShareModal = ({closeModal}) => {
@@ -10,8 +11,15 @@ export const ShareModal = ({closeModal}) => {
         setTitle(event.target.value);
     }
 
+
     const handleShare = () => {
-        Axios.post("http://localhost:4001/shareConversation", {title: title})
+        let titleUrl = title;
+        titleUrl = titleUrl.replace(/[^a-zA-Z ]/g, "")
+        titleUrl = titleUrl.toLocaleLowerCase()
+        titleUrl = titleUrl.split(" ")
+        titleUrl = titleUrl.join('-')
+
+        Axios.post("http://localhost:4001/shareConversation", {title: title, titleUrl: titleUrl, chat: store.getState().chat.chat})
     }
 
     return (

@@ -75,7 +75,7 @@ export const Options = () => {
     }
 
     const handleSave = () => {
-        console.log(convo)
+        console.log(store.getState().chat)
     }
 
     const handleModal = () => {
