@@ -70,3 +70,14 @@ app.post("/getSharedConversations", (req, res) => {
     }
   })
 })
+
+app.post("/shareConversation", (req, res) => {
+  db.query(`insert into conversations (title) values ("${req.body.title}");`, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      // res.send(result);
+      console.log("success")
+    }
+  })
+})
