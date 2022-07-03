@@ -1,6 +1,6 @@
 import '../App.css';
 import { useState, useEffect } from 'react';
-import { Navbar } from '../components/Navbar.tsx';
+import { Navbar } from '../components/Navbar';
 import { Logo } from '../components/Logo.tsx';
 import { TextBox } from '../features/chat/textBox/TextBox.js';
 import { ConversationBox } from '../features/chat/conversationBox/ConversationBox.tsx';
@@ -11,6 +11,7 @@ import { Footer } from '../components/Footer.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NoMatch } from '../components/NoMatch.js'
 import { Register } from '../components/Register.js';
+import { LogIn } from '../components/LogIn.js';
 
 function App() {
 
@@ -60,8 +61,11 @@ function App() {
                 
                 <Route path="/conversations/conversation/:conversationId" element={<Conversation />} />
 
-                {/*Auth Route*/}
+                {/*Register new user route*/}
                 <Route path="/register" element={<Register />} />
+
+                {/*User log in route*/}
+                <Route path="/login" element={<LogIn />} />                
 
                 <Route path="*" element={<NoMatch />} />
               </Routes>

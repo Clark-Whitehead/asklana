@@ -32,9 +32,9 @@ export const ShareModal = ({closeModal}) => {
                     <h1>Share with our community?</h1>
                 </div>
                 <div className="body">
-                    <p>Would you like to help others by sharing this tutoring conversation to the public?</p>
+                    <p>Give this conversation a title</p>
                 </div>
-                <div className="textBox">
+                <div className="textBox mt-n5">
                     <input onChange={handleTitleChange} value={title} className="rounded" type="text" placeholder="Type your title..." />
                 </div>
                 <div className="footer">
