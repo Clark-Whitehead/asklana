@@ -38,14 +38,21 @@ export const Register = () => {
     return (
         <div>
             <h3> Register User </h3>
-            <input type="text" onChange={handleOnChangeEmail} value={registerEmail} placeholder="Email..." />
-            <input type="password" onChange={handleOnChangePassword} value={registerPassword} placeholder="Password..." />
+            {/*
+                <input type="text" onChange={handleOnChangeEmail} value={registerEmail} placeholder="Email..." />
+                <input type="password" onChange={handleOnChangePassword} value={registerPassword} placeholder="Password..." />
 
-            <button onClick={register}>Create User</button>
+                <button onClick={register}>Create User</button>
+
+                <br />
+
+                <h1>{user?.email}</h1>
+            */}
+            <h5>Sorry, new registration is not currently open to the public</h5>
+            <h5>Available Aug 1st 2022</h5>
 
             <br />
-
-            <h1>{user?.email}</h1>
+            <h6 className="text-success">Current Users may still log in</h6>
             
         </div>
     )

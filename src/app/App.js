@@ -12,6 +12,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { NoMatch } from '../components/NoMatch.js'
 import { Register } from '../components/Register.js';
 import { LogIn } from '../components/LogIn.js';
+import { Landing } from '../components/Landing';
+import { auth } from '../firebase-config';
+import { onAuthStateChanged } from 'firebase/auth';
 
 function App() {
 
@@ -29,6 +32,14 @@ function App() {
   const isMobile = width <= 768;
   ///////////////////////////////////////////////////
 
+  //////////Set user to firebase user/////////////
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  })
+  ////////////////////////////////////////////////
+
   if (isMobile) {
     return (
       <h1>You must use on a larger screen such as a laptop</h1>
@@ -41,7 +52,16 @@ function App() {
           <div className="container">
             <Router>
               <Routes>
-                <Route 
+                {/*Landing page*/}
+                {!user && <Route
+                  path="/"
+                  element={
+                    <Landing />
+                  }
+                />}
+
+                {/*Lana chatbot homepage */}
+                {user && <Route 
                     path="/" 
                     element={
                       <div>
@@ -53,7 +73,7 @@ function App() {
                         </div>
                       </div>
                     } 
-                />
+                />}
                 <Route 
                   path="/conversations"
                   element={<Conversations />}

@@ -35,7 +35,7 @@ export const Navbar = () => {
                 </button>
             </div>
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                {user === null && <ul className="navbar-nav ml-auto">
+                {!user && <ul className="navbar-nav ml-auto">
                     <li style={{marginRight: '10px'}} className="nav-item">
                         <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/login">LOGIN</a>
                     </li>
@@ -43,7 +43,7 @@ export const Navbar = () => {
                         <a style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/register">REGISTER</a>
                     </li>
                 </ul>}
-                {user != null && <ul className="navbar-nav ml-auto">
+                {user && <ul className="navbar-nav ml-auto">
                     <li style={{marginRight: '10px'}} className="nav-item">
                         <a onClick={handleLogOut} style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">Log Out</a>
                     </li>
