@@ -29,7 +29,8 @@ function App() {
           window.removeEventListener('resize', handleWindowSizeChange);
       }
   }, []);
-  const isMobile = width <= 768;
+  // const isMobile = width <= 768;
+  const isMobile = width <= 1000;
   ///////////////////////////////////////////////////
 
   //////////Set user to firebase user/////////////
@@ -42,7 +43,7 @@ function App() {
 
   if (isMobile) {
     return (
-      <h1>You must use on a larger screen such as a laptop</h1>
+      <h1>Sorry, this site is under construction until Aug 1st 2022. You must use a device with a larger screen at least 1000px wide until then.</h1>
     )
   } else {
     return (

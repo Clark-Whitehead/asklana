@@ -54,7 +54,7 @@ export const Navbar = () => {
                             </ul>}
                             {user && <ul className="navbar-nav ml-auto">
                                 <li style={{marginRight: '10px'}} className="nav-item">
-                                    <a onClick={handleLogOut} style={{color: "#006C81", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">Log Out</a>
+                                    <a onClick={handleLogOut} style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">Log Out</a>
                                 </li>
                             </ul>}
                         </div>

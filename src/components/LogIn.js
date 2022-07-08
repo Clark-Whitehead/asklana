@@ -36,17 +36,32 @@ export const LogIn = () => {
 
 
     return (
+
         <div>
-            <h3> Log in User </h3>
-            <input type="text" onChange={handleOnChangeEmail} value={logInEmail} placeholder="Email..." />
-            <input type="password" onChange={handleOnChangePassword} value={logInPassword} placeholder="Password..." />
 
-            <button onClick={logIn}>Log In</button>
+            <div className="row">
 
-            <br />
+                <div style={{borderRadius: '10px'}} className="col-4 shadow mx-auto mt-5 pl-4 pr-4 pb-4 text-left">
 
-            <h1>{user?.email}</h1>
-            
+                    <h3 className="mt-4">Sign in</h3>
+
+                    <p>Education on your time</p>
+
+                    <input type="text" onChange={handleOnChangeEmail} value={logInEmail} placeholder="Email" className="form-control mb-5" />
+                    <input type="password" onChange={handleOnChangePassword} value={logInPassword} placeholder="Password" className="form-control mb-5" />
+
+                    <button style={{backgroundColor: '#F18000'}} className="btn w-100 text-white font-weight-bold" onClick={logIn}>Log In</button>
+
+                    
+
+                </div>
+
+            </div>
+
+            <div className="col-6 mt-5 mx-auto">
+                        <p>New to Asklana?</p> <a href="/register"> Join now</a>
+            </div>
+
         </div>
     )
 }
