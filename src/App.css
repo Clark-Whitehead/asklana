@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   /* background-image: url("https://cdn.pixabay.com/photo/2016/04/19/01/02/green-1337813_1280.jpg"); */
-  background-color: #f0f8ff;
+  background-color: white;
   height: 100vh;
 }
 
@@ -33,8 +33,4 @@
 #conversation {
   background-color: #add8e6;
   overflow-y: auto;
-}
-
-#main-text-box {
-  
 }
