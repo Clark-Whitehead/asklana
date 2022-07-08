@@ -16,7 +16,7 @@ export const Navbar = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container mt-3">
             <nav style={{marginBottom: 0}} className="navbar-fluid navbar-expand navbar-light">
                 <div className="row">
                     
