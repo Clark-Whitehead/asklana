@@ -17,7 +17,7 @@ export const Landing = () => {
                 <div style={{border: 'solid', borderColor: 'orange'}} className='col-6 rounded p-1 mb-3 mx-auto'>
                     <div className="row">
                         <div className="col-9 pl-3 pr-1">
-                            <input placeholder='Find your answers...' type="text" style={{border: 0, outline: 'none', height: '100%', width: '100%'}} />
+                            <input placeholder='Get help with any question...' type="text" style={{border: 0, outline: 'none', height: '100%', width: '100%'}} />
                         </div>
                         <div className="col-3 pr-3 pl-0">
                             <button style={{fontWeight: 'bold', backgroundColor: '#F18000', color: 'white'}} className="btn w-100">Ask</button>
