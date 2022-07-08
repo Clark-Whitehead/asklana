@@ -7,7 +7,7 @@ export const LandingCard = (props) => {
                 <p style={{fontSize: '1.2vw'}}>{props.description}</p>
                 <a href="#">
                     <span style={{fontWeight: 'bold', color: '#047090'}}>
-                        Learn more <i class="bi bi-arrow-right"></i>
+                        Learn more <i className="bi bi-arrow-right"></i>
                     </span>
                 </a>
                     
