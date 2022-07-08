@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../firebase-config';
+//import React, { useState } from 'react';
+//import { onAuthStateChanged } from 'firebase/auth';
+//import { auth } from '../firebase-config';
+import { LandingCards } from "./LandingCards"
 
 export const Landing = () => {
-
+/*
     const [user, setUser] = useState({});
 
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser);
     })
-
+*/
     return (
         <div style={{width: '70vw', marginLeft: 'auto', marginRight: 'auto'}} className="container">
             <div className="row">
@@ -31,12 +32,19 @@ export const Landing = () => {
                     <h5 style={{fontSize: '1.5vw'}} >24/7 COURSE SUPPORT</h5>
                     <h1 style={{fontSize: '3.5vw'}} >Learn with Lana</h1>
                     <h4 style={{fontSize: '1.8vw'}} >From first day to finals, get homework help and exam prep.</h4>
-                    <button style={{borderRadius: '30px', color: 'white', backgroundColor: '#F18000', fontFamily: '-moz-initial'}} className="btn">Get started</button>
+                    <button style={{borderRadius: '30px', color: 'white', backgroundColor: '#F18000', fontFamily: 'arial', fontSize: '1vw', fontWeight: 'bold'}} className="btn">Get started</button>
 
                 </div>
             </div>
             <br />
             <h1 style={{fontWeight: 'bold'}} >Study time, crunch time, anytime.</h1>
+
+            <LandingCards />
+
+            <button style={{borderRadius: '30px', color: 'white', backgroundColor: '#F18000', fontFamily: 'arial', fontSize: '1vw', fontWeight: 'bold'}} className="btn">Sign up</button>
+
+            <br />
+            <br />
         </div>
     )
 }
