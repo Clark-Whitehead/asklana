@@ -43,7 +43,7 @@ function App() {
 
   if (isMobile) {
     return (
-      <h1>Sorry, this site is under construction until Aug 1st 2022. You must use a device with a larger screen at least 1000px wide until then.</h1>
+      <h1>Sorry, this site is under construction until Aug 1st 2022. You must use a device with a larger screen until then.</h1>
     )
   } else {
     return (
