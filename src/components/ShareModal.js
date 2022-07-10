@@ -30,6 +30,7 @@ export const ShareModal = ({closeModal}) => {
                 </div>
                 <div className="title">
                     <h1>Share with our community?</h1>
+                    <p>Sharing helps others learn and they can also comment and give you more insights.</p>
                 </div>
                 <div className="body">
                     <p>Give this conversation a title</p>

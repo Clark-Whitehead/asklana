@@ -61,6 +61,16 @@ app.get("/getAllSharedConversations", (req, res) => {
   })
 })
 
+app.post("/getCategorySharedConversations", (req, res) => {
+  db.query(`select * from conversations where conversation like '%${req.body.category}%'`, (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(result);
+    }
+  })
+})
+
 app.post("/getSharedConversations", (req, res) => {
   db.query(`select * from conversations where titleUrl = "${req.body.titleUrl}"`, (err, result) => {
     if (err) {

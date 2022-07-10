@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
 import Axios from 'axios';
 
 export const Conversations = () => {
 
+    let category = useParams().category
+
     const [titles, setTitles] = useState([])
 
     useEffect(() => {
-        Axios.get("http://localhost:4001/getAllSharedConversations")
+        Axios.post("http://localhost:4001/getCategorySharedConversations", {category, category})
             .then((res) => {
                 // console.log(res.data)
                 setTitles(res.data)
@@ -30,8 +33,8 @@ export const Conversations = () => {
                     <div className="col text-dark pt-4">
                         {titles.map(title => {
                             return (
-                                <div>
-                                    <a href={'/conversations/conversation/' + title.titleUrl} key={title.id}>{title.title}</a>
+                                <div key={title.id}>
+                                    <a href={'/conversations/conversation/' + title.titleUrl}>{title.title}</a>
                                     <hr />
                                 </div>
                             )

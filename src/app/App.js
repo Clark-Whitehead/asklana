@@ -76,11 +76,14 @@ function App() {
                     } 
                 />}
                 <Route 
-                  path="/conversations"
+                  path="/conversations/:category"
                   element={<Conversations />}
                 />
                 
-                <Route path="/conversations/conversation/:conversationId" element={<Conversation />} />
+                <Route 
+                  path="/conversations/conversation/:conversationId"
+                  element={<Conversation />} 
+                />
 
                 {/*Register new user route*/}
                 <Route path="/register" element={<Register />} />

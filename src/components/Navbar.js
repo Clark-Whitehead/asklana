@@ -31,16 +31,16 @@ export const Navbar = () => {
                         <div className="navbar-collapse col-6 collapse w-100 order-1 order-md-0 dual-collapse2">
                             <ul className="navbar-nav mx-auto">
                                 <li style={{marginRight: '10px'}} className="nav-item">
-                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/">Math</a>
+                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/conversations/math">Math</a>
                                 </li>
                                 <li style={{marginRight: '10px'}} className="nav-item">
-                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Chemistry</a>
+                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/conversations/chemistry">Chemistry</a>
                                 </li>
                                 <li style={{marginRight: '10px'}} className="nav-item">
-                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Software</a>
+                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/conversations/software">Software</a>
                                 </li>
                                 <li style={{marginRight: '10px'}} className="nav-item">
-                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="#">Physics</a>
+                                    <a style={{color: "black", fontFamily: 'arial', fontWeight: 'bold'}} className="nav-link" href="/conversations/physics">Physics</a>
                                 </li>
                             </ul>
                         </div>
