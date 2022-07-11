@@ -1,27 +1,57 @@
-//import React, { useState } from 'react';
-//import { onAuthStateChanged } from 'firebase/auth';
-//import { auth } from '../firebase-config';
+import React, { useState } from 'react';
 import { LandingCards } from "./LandingCards"
 
 export const Landing = () => {
-/*
-    const [user, setUser] = useState({});
 
-    onAuthStateChanged(auth, (currentUser) => {
-        setUser(currentUser);
-    })
-*/
+    const [askText, setAskText] = useState("");
+
+    const handleAskTextChange = (event) => {
+        setAskText(event.target.value);
+    }
+
+    const handleAskClick = () => {
+        console.log(askText);
+    }
+
     return (
         <div style={{width: '70vw', marginLeft: 'auto', marginRight: 'auto'}} className="container">
             <div className="row">
                 <div style={{border: 'solid', borderColor: 'orange'}} className='col-6 rounded p-1 mb-3 mx-auto'>
                     <div className="row">
+                        
                         <div className="col-9 pl-3 pr-1">
-                            <input placeholder='Get help with any question...' type="text" style={{border: 0, outline: 'none', height: '100%', width: '100%'}} />
+                            <input 
+                                placeholder='Get help with any question...' 
+                                type="text" 
+                                style={{
+                                    border: 0, 
+                                    outline: 'none', 
+                                    height: '100%', 
+                                    width: '100%'
+                                }} 
+                                value={askText}
+                                onChange={handleAskTextChange}
+                                
+                            />
                         </div>
+
                         <div className="col-3 pr-3 pl-0">
-                            <button style={{fontWeight: 'bold', backgroundColor: '#F18000', color: 'white'}} className="btn w-100">Ask</button>
+                            <button 
+                                style={{
+                                    fontWeight: 'bold', 
+                                    backgroundColor: '#F18000', 
+                                    color: 'white'
+                                }}
+
+                                onClick={handleAskClick}
+
+                                className="btn w-100">
+                                    
+                                    Ask
+                                
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -33,8 +63,8 @@ export const Landing = () => {
                     <h1 style={{fontSize: '3.5vw'}} >Learn with Lana</h1>
                     <h4 style={{fontSize: '1.8vw'}} >From first day to finals, get homework help and exam prep.</h4>
                     
-                    {/*Landing page 'Learn with Lana' Get Started button*/}
-                    <a  ref="/register" 
+                    {/* Landing page 'Learn with Lana' Get Started button */}
+                    <a  href="/register" 
                         style={{
                             borderRadius: '30px', 
                             color: 'white', 
@@ -44,7 +74,8 @@ export const Landing = () => {
                             fontWeight: 'bold'
                         }} 
                         
-                        className="btn">
+                        className="btn"
+                    >
                             
                             Get started
                             
