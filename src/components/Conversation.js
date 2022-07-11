@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Axios from 'axios';
-import parser from 'react-html-parser';
 
 export const Conversation = () => {
 
