@@ -69,11 +69,11 @@ function App() {
                         <Logo />
                         <div 
                           style={{
-                            backgroundImage: 'url("https://likeastorm.com/wp-content/uploads/2016/06/grunge-metal-background.jpg")', 
+                            backgroundColor: 'white', 
                             borderRadius: '20px',
                             backgroundSize: 'cover'
                           }} 
-                          className="border border-secondary mb-3">
+                          className="border shadow border-secondary mb-3">
                           <ConversationBox />          
                           <TextBox />
                           <Options />

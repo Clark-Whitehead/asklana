@@ -86,11 +86,11 @@ export const TextBox = () => {
                 <div className="container col-4">
                     <button 
                         style={{
-                            backgroundColor: "#FC6653", 
+                            backgroundColor: "#F18000", 
                             color: "white", 
                             width: '100%', 
                             height: 50}} 
-                        onClick={handleClick} className="btn border border-dark">
+                        onClick={handleClick} className="btn border border-dark font-weight-bold">
                         Send
                     </button>
                 </div>

@@ -89,11 +89,18 @@ export const Options = () => {
             <div className="row">
 
                 <div className="col-4">
-                    <button  style={{backgroundColor: "#2D2D2D"}} onClick={handleBack} className="btn w-100 h-100">
+                    <button  style={{
+                                backgroundColor: "#DEEEFF"
+                            }} 
+                            
+                            onClick={handleBack} 
+                            
+                            className="btn w-100 h-100">
+
                             <div className="col">
                                 <i 
                                 className="bi bi-arrow-counterclockwise"
-                                style={{fontSize: "2em", color: 'white'}}
+                                style={{fontSize: "2em", color: 'black'}}
                                 >
                                 </i>
                             </div>
@@ -101,7 +108,15 @@ export const Options = () => {
                 </div>
 
                 <div className="col-4">
-                    <button style={{backgroundColor: "#2D2D2D", color: 'white'}} onClick={handleForward} className="btn w-100 h-100">
+                    <button style={{
+                                backgroundColor: "#DEEEFF", 
+                                color: 'black'
+                            }} 
+                            
+                            onClick={handleForward} 
+                            
+                            className="btn w-100 h-100">
+                            
                             <div className="col">
                             <i 
                                 className="bi bi-arrow-clockwise"
@@ -113,13 +128,17 @@ export const Options = () => {
                 </div>
 
                 <div className="col-2">
-                    <button onClick={handleSave} className="btn bg-light w-100 h-100 border-dark">
+                    <button 
+                    
+                        onClick={handleSave} 
+                        
+                        className="btn w-100 h-100 border-dark">
                         SAVE
                     </button>
                 </div>
 
                 <div className="col-2">
-                    <button onClick={handleModal} className="btn bg-light h-100 w-100 border-dark">
+                    <button onClick={handleModal} className="btn h-100 w-100 border-dark">
                         SHARE
                         {/* <i style={{color: '#385599'}} className="bi bi-facebook mr-1"></i>
                         <i style={{color: 'purple'}} className="bi bi-instagram mr-1"></i>

@@ -15,7 +15,7 @@ export const ConversationBox = () => {
             id="conversationBox"
             style={{height: 300, 
                 fontSize: 20, 
-                backgroundImage: 'url("https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?k=20&m=1145602814&s=612x612&w=0&h=dIJlMEyULYudmRnJZUSoOwfcF1nLBWWwHrjP764kM3s=")', 
+                
                 borderTopLeftRadius: '20px', 
                 borderTopRightRadius: '20px'}} 
             className="
