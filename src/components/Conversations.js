@@ -21,20 +21,20 @@ export const Conversations = () => {
     
 
     return (
-        <div style={{backgroundColor: '#006C81'}} className="container rounded text-white pb-3 mb-4">
+        <div style={{backgroundColor: '#F18000'}} className="container rounded text-white pb-3 mb-4">
             <div className="row mt-5">
                 <div className="col">
                     <br />
-                    <h1>Community Conversations</h1>
+                    <h1>Community {category.charAt(0).toUpperCase() + category.slice(1)} Conversations</h1>
                 </div>
             </div>
-            <div style={{backgroundColor: '#ADD8E6'}} className="container rounded">
+            <div style={{backgroundColor: 'white'}} className="container rounded">
                 <div className="row mt-5">
                     <div className="col text-dark pt-4">
                         {titles.map(title => {
                             return (
                                 <div key={title.id}>
-                                    <a href={'/conversations/conversation/' + title.titleUrl}>{title.title}</a>
+                                    <a style={{fontSize: '20px', fontWeight: 'bold'}} href={'/conversations/conversation/' + title.titleUrl}>{title.title}</a>
                                     <hr />
                                 </div>
                             )

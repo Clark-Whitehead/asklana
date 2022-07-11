@@ -6,7 +6,8 @@ import Axios from 'axios';
 export const ShareModal = ({closeModal}) => {
 
     const [title, setTitle] = useState("")
-
+    const [shared, setShared] = useState(false)
+ 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
     }
@@ -20,29 +21,51 @@ export const ShareModal = ({closeModal}) => {
         titleUrl = titleUrl.join('-')
 
         Axios.post("http://localhost:4001/shareConversation", {title: title, titleUrl: titleUrl, chat: store.getState().chat.chat})
+
+        setShared(true);
     }
 
-    return (
-        <div className="modalBackground">
+    if(shared) {
+
+        return (
+            <div className="modalBackground">
             <div className="modalContainer">
                 <div className="titleCloseBtn">
                     <button onClick={() => closeModal(false)}> X </button>
                 </div>
                 <div className="title">
-                    <h1>Share with our community?</h1>
-                    <p>Sharing helps others learn and they can also comment and give you more insights.</p>
-                </div>
-                <div className="body">
-                    <p>Give this conversation a title</p>
-                </div>
-                <div className="textBox mt-n5">
-                    <input onChange={handleTitleChange} value={title} className="rounded" type="text" placeholder="Type your title..." />
-                </div>
-                <div className="footer">
-                    <button id="cancelBtn" onClick={() => closeModal(false)}>No</button>
-                    <button onClick={handleShare}>Yes</button>
+                    <h1>Thank you for sharing!</h1>
                 </div>
             </div>
         </div>
-    )
+        )
+
+    } else {
+
+        return (
+            <div className="modalBackground">
+                <div className="modalContainer">
+                    <div className="titleCloseBtn">
+                        <button onClick={() => closeModal(false)}> X </button>
+                    </div>
+                    <div className="title">
+                        <h1>Share with our community?</h1>
+                        <p>Sharing helps others learn and they can also comment and give you more insights.</p>
+                    </div>
+                    <div className="body">
+                        <p>Give this conversation a title</p>
+                    </div>
+                    <div className="textBox mt-n5">
+                        <input onChange={handleTitleChange} value={title} className="rounded" type="text" placeholder="Type your title..." />
+                    </div>
+                    <div className="footer">
+                        <button id="cancelBtn" onClick={() => closeModal(false)}>No</button>
+                        <button onClick={handleShare}>Yes</button>
+                    </div>
+                </div>
+            </div>
+        )
+
+    }
+
 }
