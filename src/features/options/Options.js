@@ -89,11 +89,11 @@ export const Options = () => {
             <div className="row">
 
                 <div className="col-4">
-                    <button  style={{backgroundColor: "#ADD8E6"}} onClick={handleBack} className="btn w-100 h-100">
+                    <button  style={{backgroundColor: "#2D2D2D"}} onClick={handleBack} className="btn w-100 h-100">
                             <div className="col">
                                 <i 
                                 className="bi bi-arrow-counterclockwise"
-                                style={{fontSize: "2em", color: 'red'}}
+                                style={{fontSize: "2em", color: 'white'}}
                                 >
                                 </i>
                             </div>
@@ -101,7 +101,7 @@ export const Options = () => {
                 </div>
 
                 <div className="col-4">
-                    <button style={{backgroundColor: "#ADD8E6", color: 'green'}} onClick={handleForward} className="btn w-100 h-100">
+                    <button style={{backgroundColor: "#2D2D2D", color: 'white'}} onClick={handleForward} className="btn w-100 h-100">
                             <div className="col">
                             <i 
                                 className="bi bi-arrow-clockwise"

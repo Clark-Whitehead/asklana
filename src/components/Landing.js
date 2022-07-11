@@ -32,7 +32,23 @@ export const Landing = () => {
                     <h5 style={{fontSize: '1.5vw'}} >24/7 COURSE SUPPORT</h5>
                     <h1 style={{fontSize: '3.5vw'}} >Learn with Lana</h1>
                     <h4 style={{fontSize: '1.8vw'}} >From first day to finals, get homework help and exam prep.</h4>
-                    <a href="/register" style={{borderRadius: '30px', color: 'white', backgroundColor: '#F18000', fontFamily: 'arial', fontSize: '1vw', fontWeight: 'bold'}} className="btn">Get started</a>
+                    
+                    {/*Landing page 'Learn with Lana' Get Started button*/}
+                    <a  ref="/register" 
+                        style={{
+                            borderRadius: '30px', 
+                            color: 'white', 
+                            backgroundColor: '#F18000', 
+                            fontFamily: 'arial', 
+                            fontSize: '1vw', 
+                            fontWeight: 'bold'
+                        }} 
+                        
+                        className="btn">
+                            
+                            Get started
+                            
+                    </a>
 
                 </div>
             </div>

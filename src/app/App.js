@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Logo } from '../components/Logo.tsx';
 import { TextBox } from '../features/chat/textBox/TextBox.js';
-import { ConversationBox } from '../features/chat/conversationBox/ConversationBox.tsx';
+import { ConversationBox } from '../features/chat/conversationBox/ConversationBox.js';
 import { Options } from '../features/options/Options.js';
 import { Conversations } from '../components/Conversations';
 import { Conversation } from '../components/Conversation';
@@ -67,7 +67,13 @@ function App() {
                     element={
                       <div>
                         <Logo />
-                        <div style={{backgroundColor: '#DBDBDB', borderRadius: '20px'}} className="border border-secondary mb-3">
+                        <div 
+                          style={{
+                            backgroundImage: 'url("https://likeastorm.com/wp-content/uploads/2016/06/grunge-metal-background.jpg")', 
+                            borderRadius: '20px',
+                            backgroundSize: 'cover'
+                          }} 
+                          className="border border-secondary mb-3">
                           <ConversationBox />          
                           <TextBox />
                           <Options />
