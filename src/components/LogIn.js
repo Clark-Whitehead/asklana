@@ -45,10 +45,10 @@ export const LogIn = () => {
                     <div className="row">
                         <div style={{fontFamily: 'Fredericka the Great'}} className="col-6 mx-auto shadow rounded bg-dark text-light">
                             <h1>Question</h1>
-                            <h3>{store.getState().ask}</h3>
+                            <h3>{store.getState().ask.ask}</h3>
 
                             <h1>Answer</h1>
-                            <h3>Your answer</h3>
+                            <h3>{store.getState().ask.response}</h3>
 
                             <hr />
                             <h3>Sign in for longer conversations</h3>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { LandingCards } from "./LandingCards";
 import { useDispatch } from 'react-redux';
-import { addAsk } from '../features/ask/askSlice';
+import { addAsk, addResponse } from '../features/ask/askSlice';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 export const Landing = () => {
@@ -12,14 +13,29 @@ export const Landing = () => {
 
 
     const [askText, setAskText] = useState("");
+    // const [isLoading, setLoading] = useState(true);
 
     const handleAskTextChange = (event) => {
         setAskText(event.target.value);
     }
 
-    const handleAskClick = () => {        
-        dispatch(addAsk(askText));
-        navigate("/login");
+    const handleAskClick = () => {  
+
+        axios.post('http://localhost:4001/apiTest', {message: askText})
+        .then(res => {
+            const response = res.data.responseOut;
+            dispatch(addAsk(askText));
+            dispatch(addResponse(response));
+            navigate("/login");
+        })
+        .catch(err => {
+            console.log(err)
+        });
+        
+
+        
+        
+        
     }
 
     return (

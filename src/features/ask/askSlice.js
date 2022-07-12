@@ -2,10 +2,13 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const ask = {
     name: 'ask',
-    initialState: "",
+    initialState: {ask: "", response: ""},
     reducers: {
         addAsk: (state, action) => {
-            return action.payload;
+            return {...state, ask: action.payload};
+        },
+        addResponse: (state, action) => {
+            return {...state, response: action.payload};
         }
     }
 
@@ -15,7 +18,8 @@ export const askSlice = createSlice(ask);
 
 export const {
 
-    addAsk
+    addAsk,
+    addResponse
 
 } = askSlice.actions;
 
