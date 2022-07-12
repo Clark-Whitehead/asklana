@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { LandingCards } from "./LandingCards"
+import { LandingCards } from "./LandingCards";
+import { useDispatch } from 'react-redux';
+import { addAsk } from '../features/ask/askSlice';
+// import store from '../app/store';
 
 export const Landing = () => {
+
+    const dispatch = useDispatch();
 
     const [askText, setAskText] = useState("");
 
@@ -9,8 +14,8 @@ export const Landing = () => {
         setAskText(event.target.value);
     }
 
-    const handleAskClick = () => {
-        console.log(askText);
+    const handleAskClick = () => {        
+        dispatch(addAsk(askText));
     }
 
     return (
