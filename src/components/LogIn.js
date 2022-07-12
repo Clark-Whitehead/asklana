@@ -39,7 +39,7 @@ export const LogIn = () => {
     return (
 
         <div>
-            { store.getState().ask != "" &&
+            { store.getState().ask.ask != "" &&
                 <div>
                     <br /><br /><hr />
                     <div className="row">
