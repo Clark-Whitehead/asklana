@@ -13,6 +13,7 @@ export const Landing = () => {
 
 
     const [askText, setAskText] = useState("");
+    const [buttonText, setButtonText] = useState("Ask");
     // const [isLoading, setLoading] = useState(true);
 
     const handleAskTextChange = (event) => {
@@ -20,6 +21,8 @@ export const Landing = () => {
     }
 
     const handleAskClick = () => {  
+
+        setButtonText("Wait...");
 
         axios.post('http://localhost:4001/apiTest', {message: askText})
         .then(res => {
@@ -72,7 +75,7 @@ export const Landing = () => {
 
                                 className="btn w-100">
                                     
-                                    Ask
+                                    {buttonText}
                                 
                             </button>
                         </div>
