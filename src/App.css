@@ -16,6 +16,10 @@
   flex:1;
 }
 
+hr {
+  background-color: white;
+}
+
 #main-footer {
   position: relative;
   width: 100%;

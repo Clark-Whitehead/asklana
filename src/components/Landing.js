@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { LandingCards } from "./LandingCards";
 import { useDispatch } from 'react-redux';
 import { addAsk } from '../features/ask/askSlice';
-// import store from '../app/store';
+import { useNavigate } from 'react-router-dom';
+
 
 export const Landing = () => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
 
     const [askText, setAskText] = useState("");
 
@@ -16,6 +19,7 @@ export const Landing = () => {
 
     const handleAskClick = () => {        
         dispatch(addAsk(askText));
+        navigate("/login");
     }
 
     return (

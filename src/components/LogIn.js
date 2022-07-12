@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase-config';
+import store from '../app/store';
 
 export const LogIn = () => {
 
@@ -38,6 +39,23 @@ export const LogIn = () => {
     return (
 
         <div>
+            { store.getState().ask != "" &&
+                <div>
+                    <br /><br /><hr />
+                    <div className="row">
+                        <div style={{fontFamily: 'Fredericka the Great'}} className="col-6 mx-auto shadow rounded bg-dark text-light">
+                            <h1>Question</h1>
+                            <h3>{store.getState().ask}</h3>
+
+                            <h1>Answer</h1>
+                            <h3>Your answer</h3>
+
+                            <hr />
+                            <h3>Sign in for longer conversations</h3>
+                        </div>
+                    </div>
+                </div>
+            }
 
             <div className="row">
 
@@ -58,7 +76,7 @@ export const LogIn = () => {
 
             </div>
 
-            <div className="col-6 mt-5 mx-auto">
+            <div className="col-6 mt-5 mx-auto mb-5">
                         <p>New to Asklana?</p> <a href="/register"> Join now</a>
             </div>
 
